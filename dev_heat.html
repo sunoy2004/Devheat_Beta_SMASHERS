@@ -4,66 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>searching for Teammates</title>
+    <title>Searching for Teammates</title>
     <link rel="stylesheet" href="dev_heat.css">
 </head>
 
-<body>
-    <div class="dropdown">
-        <button class="a">Main Page</button>
-        <div class="dropdown-content">
-            <a>1<br>2<br>3</a>
+<body class="bg_image">
+    <div>
+        <div class="box1">
+            <img src="D:\Dev Heat\Devheat_Beta_SMASHERS\Group 8.png" alt="Logo" class="logo">
+            <img src="D:\Dev Heat\Devheat_Beta_SMASHERS\Group 21.png" alt="Account" class="account_img">
         </div>
-    </div>
-    <div class="dropdown">
-        <button class="a">Registration Page</button>
-        <div class="dropdown-content">
-            <a>Hackathon National level<br>Hackathon State level<br>3</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="a">Search Page</button>
-        <div class="dropdown-content">
-            <a>Hackathon National level<br>Hackathon State level<br>3</a>
-        </div>
-    </div>
-    <div class="dropdown">
-        <button class="a">Hackathon Page</button>
-        <div class="dropdown-content">
-            <a>Hackathon National level<br>Hackathon State level<br>3</a>
-        </div>
-    </div>
-    <div class="search">
-        <input type="text">
-    </div><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-    <div id="id01" class="modal">
-
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
+        <div class="box2">
+            <div class="dropdown">
+                <button class="a">Home</button>
+                <div class="dropdown-content">
+                    <a>Tutorial<br>Certification</a>
+                </div>
             </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+            <div class="dropdown">
+                <button class="a">Menu</button>
+                <div class="dropdown-content">
+                    <a>Hackathon National level<br>Hackathon State level<br>3</a>
+                </div>
             </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                    class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+            <div class="dropdown">
+                <button class="a">Services</button>
+                <div class="dropdown-content">
+                    <a>Hackathon National level<br>Hackathon State level<br>3</a>
+                </div>
             </div>
-        </form>
+            <div class="dropdown">
+                <button class="a">About Us</button>
+                <div class="dropdown-content">
+                    <a>Hackathon National level<br>Hackathon State level<br>3</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="a">Help</button>
+                <div class="dropdown-content">
+                    <a>Hackathon National level<br>Hackathon State level<br>3</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="Hackathon">
+            <p class="hack">HACKATHON</p>
+            <p class="line">In Search of Collaborators.
+                <img class="collab" src="D:\Dev Heat\Devheat_Beta_SMASHERS\group_c.png">
+            </p>
+        </div>
+        <br>
+        <div class="search">
+            <div class="search_button">
+                <form class="example" action="/action_page.php">
+                    <input type="text" placeholder="Search for your domain..." name="search">
+                    <button type="submit">
+                        <img src="D:\Dev Heat\Devheat_Beta_SMASHERS\download-removebg-preview (1).png"
+                            class="search_symbol">
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 
