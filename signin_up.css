@@ -1,0 +1,114 @@
+.container{
+    width: 90vw;
+    height: 70vw;
+    background-image:url("Sign_up.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.form-box{
+    width: 35vw;
+    height: 30vw;
+    background-image: linear-gradient(3deg,rgba(255, 255, 255, 0) 0%, #1a0232 100% ); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    min-height: 50vw; 
+    font-size: 9px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin:5vw;
+    left: 26vw; 
+}
+::placeholder{
+    font-size: 10px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    border-radius: 10px;
+    color: #ffff;
+    border: #080917;
+    text-shadow: #1b1d46;
+}
+h1{
+    margin: 40px;
+    margin-bottom: 5vw;
+    font-weight:100;
+    text-align: start;
+    color: #ffff;
+    font-size: 16px;
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 40px;
+    margin-bottom: 2px;
+}
+input{
+    height: 2.3vw;
+    width: 17vw;
+    border-style:hidden;
+    border-radius: 7px;
+
+}
+p{
+    color: #ffff;
+    opacity: 0.8;
+    align-items: center;
+    font-size:medium;
+}
+.button{
+    background-color: #3faa42;
+    color: white;
+    border-style: hidden;
+    border-radius: 5vw;
+    text-align: center;
+    font-size:1.5vw;
+    cursor: pointer;
+    padding: 0.5vw 0.5vw;
+}
+.box{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-style: hidden;
+    border-radius: 1vw;
+    text-align:center;
+    font-size:1.5vw;
+    cursor: pointer;
+    padding: 0.5vw 2vw;
+
+}
+img{
+    margin:-2px;
+    margin-right: 4px;
+}
+#mainbtn{
+    margin-right: 40vw;
+    margin-left: 2vw;
+    color:#ffffff;
+    font-size: 1.5vw;
+}
+#helpbtn{
+    margin-left: 10vw;
+    color: #3faa42;
+    font-size: 1.5vw;
+}
+#pass{
+    color: red;
+    font-size: small;
+}
+#signin{
+    font-size: 1vw;
+}
+#signup{
+    font-size: 1vw;
+    text-align: center;
+}
+
+
+
