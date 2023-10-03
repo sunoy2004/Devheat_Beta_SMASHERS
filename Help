@@ -1,0 +1,25 @@
+<-- HELP -->
+
+-->Click on "Back to hope page" to return to our main site.
+
+1.Sign up
+How to sign up on our platform:
+->Click on sign up button on the top right-corner on our site.
+->The link will lead you to our sign up page.
+->Enter the required credentials.
+->Click on the sign up button.
+->An alert message will be displayed on the top of the screen.
+->You are registered on our platform successfully and your credentials are saved on our database.
+->You can also login to our site using your GitHub credentials.
+
+ Already have an account?
+->This will lead you to sign in page.
+->Enter you username and password.
+->You'll be signed in on your account after validation from our database.
+
+2.Password recovery
+How to recover your password:
+->This link will lead you our password recovery page.
+->Enter your username or Email-id registered on our site and press submit.
+->After validation from our database your password will be displayed on the screen.
+
