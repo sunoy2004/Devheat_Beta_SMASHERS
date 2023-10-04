@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 
 body {
@@ -78,16 +78,15 @@ body {
     position: absolute;
     right: 0px;
     margin-right: 50px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-.signup {
+.login {
     position: absolute;
     right: 0px;
     float: right;
     background: black;
-    margin-right: 70px;
-    margin-top: 6px;
+    margin-right: 4.5vw;
 }
 
 .a {
@@ -99,6 +98,8 @@ body {
     align-items: center;
     font-size: 100%;
     margin-left: 20px;
+    height: fit-content;
+    width: fit-content;
 }
 
 .box1 {
@@ -109,7 +110,7 @@ body {
 }
 
 .box2 {
-    height: 40px;
+    height: fit-content;
     width: 100vw;
     background-color: rgb(7, 2, 34);
     position: relative;
@@ -149,7 +150,7 @@ body {
     flex-wrap: wrap;
     margin: 0;
     justify-content: space-between;
-    opacity: 0.7;
+
 }
 
 .box_a {
@@ -157,7 +158,7 @@ body {
     height: 250px;
     width: fit-content;
     background: rgb(232, 232, 232);
-    border-radius: 8px;
+    border-radius: 20px;
     position: relative;
 }
 
@@ -178,6 +179,8 @@ body {
     border-width: 0px;
     background: white;
     opacity: 0.5;
+    height: fit-content;
+    width: fit-content;
 }
 
 .link {
@@ -219,7 +222,9 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 500px;
+    height: fit-content;
+    width: fit-content;
+    /* min-width: 500px; */
     padding: 12px 16px;
     z-index: 1;
     color: white;
@@ -268,7 +273,6 @@ body {
     text-align: justify;
     display: flex;
     width: 50%;
-    margin-left: 50px;
     font-size: 20px;
     letter-spacing: 2px;
     float: left;
@@ -317,7 +321,6 @@ body {
     margin-left: 40px;
     position: absolute;
     font-size: 30px;
-    opacity: 0.7;
     padding: 30px;
 }
 
@@ -396,7 +399,7 @@ body {
 
 .foot img {
     height: 100px;
-    width: 200px;
+    width: 150px;
 }
 
 .foot1 {
@@ -404,7 +407,7 @@ body {
     right: 73%;
     width: 20%;
     line-height: normal;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color: white;
 }
 
@@ -417,9 +420,9 @@ a {
     color: white;
     font-size: 20px;
     right: 70%;
-    width: 15%;
+    width: fit-content;
     line-height: normal;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .last {
@@ -497,7 +500,6 @@ input {
     width: 17vw;
     border-style: hidden;
     border-radius: 7px;
-
 }
 
 p {
@@ -554,7 +556,9 @@ p {
     justify-content: left;
     position: static;
     margin: 5vw;
-    margin-left: 10vw;
+    box-sizing: border-box;
+    padding-top: 3vw;
+
 }
 
 .search1 {
@@ -572,14 +576,14 @@ p {
     text-align: center;
     align-items: center;
     justify-content: left;
-    margin: 2vw;
-    margin-left: 13vw;
-    /* display: flex; */
-
+    margin-left: 10vw;
+    margin-right: 5vw;
+    margin-top: 3vw;
+    box-sizing: border-box;
+    padding-top: 3vw;
 }
 
 .search2 {
-    /* display: flex; */
     align-items: center;
     width: 30vw;
     height: fit-content;
@@ -589,14 +593,14 @@ p {
     border-style: dotted;
     border-color: #ffffff;
     min-height: 35vw;
+    max-width: 40vw;
     font-size: 2vw;
     text-align: center;
     align-items: center;
     justify-content: left;
-    margin-left: 15vw;
-    margin-top: 3vw;
-    /* margin-bottom: 3vw; */
-
+    box-sizing: border-box;
+    padding-top: 3vw;
+    margin: 5vw;
 }
 
 .p1 {
@@ -605,17 +609,15 @@ p {
 
 .p2 {
     text-align: center;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .tab {
     width: 60%;
-    height: 2.5vw;
-    /* background-image: linear-gradient(1deg, rgba(0, 0, 0, 0) 0%, #000000 100%); */
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: fit-content;
     border-color: #000000;
-    margin-left: 25vw;
-    margin-bottom: 4vw;
+    margin-left: 20vw;
+    margin-bottom: 0;
 }
 
 .text1 {
@@ -628,6 +630,7 @@ p {
     margin-top: 15vw;
     text-align: justify;
     font-size: 30px;
+    width: 40vw;
 }
 
 .text2 {
@@ -635,8 +638,23 @@ p {
     text-align: justify;
 }
 
+.text2 p {
+    margin-top: 13vw;
+    text-align: justify;
+    font-size: 30px;
+    width: 40vw;
+}
+
 .text3 {
     display: flex;
     text-align: right;
-    margin-left: 16vw;
+    margin-left: 10vw;
+}
+
+.text3 p {
+    margin-top: 15vw;
+    text-align: justify;
+    font-size: 30px;
+    margin-right: 5vw;
+    width: 40vw;
 }
