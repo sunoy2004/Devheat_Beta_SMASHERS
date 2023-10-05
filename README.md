@@ -21,9 +21,7 @@
 
 # OVERVIEW
 
-<p><h3>This weboage is designed to store and search the data or students or professionals for searching their teammates in various hackthons across world wide.
-For this to work you need to first clone the git repository of this web page and then put/ paste every folder content in one.<br>
-To load the images and the files in one folder helps the content to load on webpage.</h3></p>
+<h2>This webpage is designed to store and search the data of developers on basis of their skills and for searching teammates for various hackthons across the world.</h2>
 
 ## TECHNOLOGIES USED 
 <img alt="Static Badge" src="https://img.shields.io/badge/HTML-orange">
@@ -35,6 +33,17 @@ To load the images and the files in one folder helps the content to load on we
 <img alt="Static Badge" src="https://img.shields.io/badge/GIT-red">
 <img alt="Static Badge" src="https://img.shields.io/badge/GITHUB-bright%20yellow">
 <img alt="Static Badge" src="https://img.shields.io/badge/FIGMA-purple">
+
+
+# SET UP
+To run the project on your **local system** go through the follong steps:<br><br>
+Step 1: <a href="https://code.visualstudio.com/">Open vs code on your system </a>and open a new folder.<br><br>
+Step 2:Make sure you have git installed in your system (to check enter 'git --version' in cmd) then run the following command in VS Codem terminal.<br>
+```bash
+      git clone https://github.com/sunoy2004/Devheat_Beta_SMASHERS.git
+```
+Step 2:
+
 
 # WORK FLOW :
 
@@ -56,7 +65,8 @@ We provide you with the best developers across the globe .
 6. The user can then send a join request to the team he/she created for the hackthon.</p>
 
 # PREVIEW OF OUR WEBSITE (UI/UX)
-To get preview of our website visit the following FIGMA link:<br>
+
+OR<br>Visit the following FIGMA link:<br>
 https://www.figma.com/file/IXMLWl6Aspfjwb8yQxRC9Y/DevHeat_SMASHERS?type=design&node-id=2%3A2&mode=design&t=CSl6op1RnzbLUhJm-1
 
 # OUR COLLABORATORS
