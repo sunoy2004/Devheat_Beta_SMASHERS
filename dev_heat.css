@@ -387,11 +387,15 @@ body {
     /* text-align: center; */
 }
 
+.txt {
+    padding-bottom: 10vw;
+    margin-left: 5vw;
+}
+
 .txt p {
     text-align: center;
     justify-content: center;
     display: flex;
-    margin-bottom: 2vw;
 }
 
 .footer {
@@ -568,23 +572,6 @@ p {
 }
 
 .searchbox {
-    /* width: 30vw;
-    height: fit-content;
-    background-image: linear-gradient(3deg, rgba(255, 255, 255, 0) 0%, #1a0232 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 0.5vw;
-    border-style: dotted;
-    border-color: #ffffff;
-    min-height: 35vw;
-    font-size: 2vw;
-    text-align: center;
-    align-items: left;
-    justify-content: left;
-    position: static;
-    margin: 3vw;
-    box-sizing: border-box;
-    padding-top: 3vw;
-    transition: transform .2s; */
     align-items: center;
     width: 30vw;
     height: fit-content;
@@ -606,6 +593,7 @@ p {
     box-sizing: border-box;
     padding-top: 3vw;
     transition: transform .2s;
+    margin-left: 10vw;
 }
 
 .searchbox:hover {
@@ -741,4 +729,41 @@ p {
 
 .styled-table tbody tr:hover {
     background-color: #2008fd;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.1s ease;
+    height: fit-content;
+    width: fit-content;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    /* display: flex; */
+}
+
+.collaborators {
+    padding-bottom: 5vw;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.card img {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+.card img:nth-child(2) {
+    transform: rotateY(180deg);
+}
+
+.card:hover img:nth-child(2) {
+    transform: rotateY(0deg);
+}
+
+.card:hover img:nth-child(1) {
+    transform: rotateY(-180deg);
 }
