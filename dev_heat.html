@@ -296,79 +296,50 @@
                 <div class="text1">
                     <div class="searchbox" id="navigate0">
                         <h2 id="title">Search for Teammates</h2>
-                        <style>
-                             .styled-table {
-                                        width: 90%;
-                                        border-collapse: collapse;
-                                        /* margin: 10px 0; */
-                                        font-size: 15px;
-                                        text-align: left;
-                                        height: fit-content;
-                                        justify-content: center;
-                                    }
-
-                                    .styled-table th,
-                                    .styled-table td {
-                                        /* padding: 12px 12px; */
-                                        border-bottom: 1px solid #f3f2f6;
-                                    }
-
-                                    .styled-table th {
-                                        background-color: #251149;
-                                    }
-
-                                    .styled-table tbody tr:hover {
-                                        background-color: #000000;
-                                    }
-                                    .styled-table{
-                                        border: #f3f2f6;
-                                        /* border-style: dotted; */
-                                    }
-                                    
-                        </style>
-                        </form> 
+                       
+                        </form>
                         <label for="user_name">Name:</label>
-                                <input type="text" id="user_name"><br><br>
-                                
-                                <label for="skills">Skills:</label>
-                                <input type="text" id="skills"><br><br>
-                                
-                                <label for="domain">Domain:</label>
-                                <input type="text" id="domain"><br><br>
-                                
-                                <button class="button"onclick="searchUsers()">Search</button>
+                        <input type="text" id="user_name"><br><br>
 
-                               
-                                <!-- here is the java script code which help us to fetch the search php to html and connect to tahe table for view point of view  -->
-                                <script>
-                                    function searchUsers() {
-                                        var user_name = document.getElementById("user_name").value;
-                                        var skills = document.getElementById("skills").value ;
-                                        var domain = document.getElementById("domain").value ;
-                            
-                                        var xhr = new XMLHttpRequest();
-                                        xhr.open("POST", "search.php", true);
-                                        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-                                        xhr.onreadystatechange = function() {
-                                            if (xhr.readyState == 4 && xhr.status == 200) {
-                                                displayResults(xhr.responseText);
-                                        }
-                                    };
-                                    xhr.send("user_name=" + user_name + "&skills=" + skills + "&domain=" + domain);
-                                }
-                                
-                                function displayResults(response) {
-                                    var resultsDiv = document.getElementById("search-results");
-                                    resultsDiv.innerHTML = response;
-                                    var table = resultsDiv.querySelector('table');
-                                    if (table) {
-                                        table.classList.add("styled-table");
+                        <label for="skills">Skills:</label>
+                        <input type="text" id="skills"><br><br>
+
+                        <label for="domain">Domain:</label>
+                        <input type="text" id="domain"><br><br>
+
+                        <button class="button" onclick="searchUsers()">Search</button>
+
+
+                        <!-- here is the java script code which help us to fetch the search php to html and connect to tahe table for view point of view  -->
+                        <script>
+                            function searchUsers() {
+                                var user_name = document.getElementById("user_name").value;
+                                var skills = document.getElementById("skills").value;
+                                var domain = document.getElementById("domain").value;
+
+                                var xhr = new XMLHttpRequest();
+                                xhr.open("POST", "search.php", true);
+                                xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                xhr.onreadystatechange = function () {
+                                    if (xhr.readyState == 4 && xhr.status == 200) {
+                                        displayResults(xhr.responseText);
                                     }
+                                };
+                                xhr.send("user_name=" + user_name + "&skills=" + skills + "&domain=" + domain);
+                            }
+
+                            function displayResults(response) {
+                                var resultsDiv = document.getElementById("search-results");
+                                resultsDiv.innerHTML = response;
+                                var table = resultsDiv.querySelector('table');
+                                if (table) {
+                                    table.classList.add("styled-table");
                                 }
-                                </script>
+                            }
+                        </script>
 
                     </div>
-                    <div id="search-results" ></div>
+                    <div id="search-results"></div>
                     <p>
                         <!-- NOTE : Enter skill tag tog search for developers -->
                     </p>
@@ -462,21 +433,17 @@
         <br><br><br>
         <div class="align">
             <div class="BOX">
-                <div style="margin-bottom: 2vw;" id="AboutUs">
+                <div id="AboutUs" style="align-items: center; margin-left: 10vw;">
                     <div class="h">
                         <h1>OUR COLLABORATORS </h1>
                     </div>
-                    <div class="Collaborators">
+                    <div>
                         <div class="txt">
-                            <p>
-                                <!-- <div class="main">
-                                <div class="card">
-                                    <div class="front"><img src="anisha.png" class="col">front</div>
-                                    <div class="back"><img src="logo.png">back</div>
-                                </div>
-                            </div> -->
+                            <span class="card">
                                 <img src="anisha.png" class="col">
-                                <span class="text">ANISHA SODANI<br>FRONTEND</span>
+                                <img src="anisha1.jpeg" class="col">
+                            </span>
+                            <p class="Collaborators"><span class="text">ANISHA SODANI<br>FRONTEND</span>
                                 <span class="footer_image"><a
                                         href="https://www.linkedin.com/in/anisha-sodani-2430ba257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
                                             src="linkedin.png"></a></span>
@@ -485,8 +452,11 @@
 
                         <br>
                         <div class="txt">
-                            <p>
+                            <span class="card">
                                 <img src="sunio.png" class="col">
+                                <img src="sunio1.jpeg" class="col">
+                            </span>
+                            <p class="Collaborators">
                                 <span class="text">SUNOY ROY<br>UI/UX Designer</span>
                                 <span class="footer_image"><a
                                         href="https://www.linkedin.com/in/sunoy-roy-52782a258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
@@ -495,8 +465,11 @@
                         </div>
                         <br>
                         <div class="txt">
-                            <p>
+                            <span class="card">
                                 <img src="mayank.png" class="col">
+                                <img src="mayank1.jpeg" class="col">
+                            </span>
+                            <p class="Collaborators">
                                 <span class="text">MAYANK CHOUHAN<br>BACKEND</span>
                                 <span class="footer_image"><a
                                         href="https://www.linkedin.com/in/mayank-chouhan-a92466251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
