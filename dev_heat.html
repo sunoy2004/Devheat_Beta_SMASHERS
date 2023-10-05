@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Searching for Teammates</title>
+    <link rel="icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="dev_heat.css">
 </head>
 
@@ -14,7 +15,7 @@
             <a href="">
                 <img src="logo.png" alt="Logo" class="logo">
             </a>
-            <a href="">
+            <a href="signinMAIN.php">
                 <img src="account.png" alt="Account" class="account_img">
 
             </a>
@@ -29,7 +30,8 @@
             <div class="dropdown">
                 <button class="a">Menu</button>
                 <div class="dropdown-content">
-                    <a>Hackathon Lists<br>Rules and Regulations<br>Contact Us</a>
+                    <a><a href="https://unstop.com/blog/upcoming-hackathons">Hackathon Lists</a><br><a
+                            href="#Guidelines">Guidelines</a><br><a href="#AboutUs">Contact Us</a></a>
                 </div>
             </div>
             <div class="dropdown">
@@ -49,18 +51,15 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="a">About Us</button>
+                <button class="a"><a href="README.md">About Us</a></button>
                 <div class="dropdown-content">
                 </div>
             </div>
             <div class="dropdown">
-                <button class="a">Help</button>
-                <div class="dropdown-content">
-                    <a>Helpline<br>Visit Us</a>
-                </div>
+                <button class="a"><a href="Help">Help</a></button>
             </div>
             <div class="login">
-                <a href="signinMAIN.php">Log in</a>
+                <a href="signupMAIN.php">Log in</a>
             </div>
         </div>
         <br>
@@ -221,7 +220,7 @@
         <br>
         <div class="align">
             <div class="BOX">
-                <div class="roadmap">
+                <div class="roadmap" id="Guidelines">
                     <h1>ROADMAP FOR BUILDING A WINNING HACKATHON TEAM</h1>
                     <br>
                     <div class="p1">
@@ -293,32 +292,80 @@
                 <div class="text1">
                     <div class="searchbox" id="navigate0">
                         <h2 id="title">Search for Teammates</h2>
-                        <form>
-                            <div class="input">
-                                <div class="inputdata">
-                                    <h1>Name:</h1>
-                                    <input type="text" placeholder="Name(optional)" onpointerover="">
-                                </div>
-                                <div class="inputdata">
-                                    <h1>*Skill:</h1>
-                                    <input type="text" placeholder="Required skill (required)" required>
-                                </div>
-                                <div class="inputdata">
-                                    <h1>Domain:</h1>
-                                    <input type="text" placeholder="Domain of project (optional)">
-                                </div>
-                                <br>
-                                <button class="button" onclick="submitbtn()">SUBMIT</button>
-                                <br>
-                            </div>
-                        </form>
+                        <style>
+                             .styled-table {
+                                        width: 100%;
+                                        border-collapse: collapse;
+                                        /* margin: 10px 0; */
+                                        font-size: 15px;
+                                        text-align: left;
+                                    }
+
+                                    .styled-table th,
+                                    .styled-table td {
+                                        /* padding: 12px 12px; */
+                                        border-bottom: 1px solid #f3f2f6;
+                                    }
+
+                                    .styled-table th {
+                                        background-color: #251149;
+                                    }
+
+                                    .styled-table tbody tr:hover {
+                                        background-color: #000000;
+                                    }
+                                    .styled-table{
+                                        border: #f3f2f6;
+                                        border-style: dotted;
+                                    }
+                                    
+                        </style>
+                        </form> 
+                        <label for="user_name">Name:</label>
+                                <input type="text" id="user_name"><br><br>
+                                
+                                <label for="skills">Skills:</label>
+                                <input type="text" id="skills"><br><br>
+                                
+                                <label for="domain">Domain:</label>
+                                <input type="text" id="domain"><br><br>
+                                
+                                <button class="button"onclick="searchUsers()">Search</button>
+
+                               
+                                <!-- here is the java script code which help us to fetch the search php to html and connect to tahe table for view point of view  -->
+                                <script>
+                                    function searchUsers() {
+                                        var user_name = document.getElementById("user_name").value;
+                                        var skills = document.getElementById("skills").value ;
+                                        var domain = document.getElementById("domain").value ;
+                            
+                                        var xhr = new XMLHttpRequest();
+                                        xhr.open("POST", "search.php", true);
+                                        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                                        xhr.onreadystatechange = function() {
+                                            if (xhr.readyState == 4 && xhr.status == 200) {
+                                                displayResults(xhr.responseText);
+                                        }
+                                    };
+                                    xhr.send("user_name=" + user_name + "&skills=" + skills + "&domain=" + domain);
+                                }
+                                
+                                function displayResults(response) {
+                                    var resultsDiv = document.getElementById("search-results");
+                                    resultsDiv.innerHTML = response;
+                                    var table = resultsDiv.querySelector('table');
+                                    if (table) {
+                                        table.classList.add("styled-table");
+                                    }
+                                }
+                                </script>
+
                     </div>
-                    <p>NOTE : Start searching for teammates early,the best headstart
-                        you can give yourself is to start looking for teammates
-                        immediately after you decide to participate in a hackathon.
-                        Don't wait until you've got an idea in mind—once you've
-                        decided to take part in a hackathon, put the word out
-                        and find out if anyone's interested. </p>
+                    <div id="search-results" ></div>
+                    <p>
+                        <!-- NOTE : Enter skill tag tog search for developers -->
+                    </p>
                 </div>
                 <div class="tab">
                     <p class="p2">OR Join / Create a Team</p>
@@ -347,20 +394,14 @@
                             </div>
                         </form>
                     </div>
-                    <p>NOTE : Start searching for teammates early,the best headstart
-                        you can give yourself is to start looking for teammates
-                        immediately after you decide to participate in a hackathon.
-                        Don't wait until you've got an idea in mind—once you've
-                        decided to take part in a hackathon, put the word out
-                        and find out if anyone's interested. </p>
+                    <p>
+                        NOTE : Enter the required details to join a team.
+                    </p>
                 </div>
                 <div class="text3">
-                    <p>NOTE : Start searching for teammates early,the best headstart
-                        you can give yourself is to start looking for teammates
-                        immediately after you decide to participate in a hackathon.
-                        Don't wait until you've got an idea in mind—once you've
-                        decided to take part in a hackathon, put the word out
-                        and find out if anyone's interested. </p>
+                    <p>
+                        NOTE : Enter the required credentials to create a team.
+                    </p>
                     <div class="search2" id="navigate2">
                         <h2 id="title">Create Team</h2>
                         <form>
@@ -415,31 +456,47 @@
         <br><br><br>
         <div class="align">
             <div class="BOX">
-                <div>
+                <div style="margin-bottom: 2vw;" id="AboutUs">
                     <div class="h">
                         <h1>OUR COLLABORATORS </h1>
                     </div>
                     <div class="Collaborators">
-                        <span class="txt">
+                        <div class="txt">
                             <p>
+                                <!-- <div class="main">
+                                <div class="card">
+                                    <div class="front"><img src="anisha.png" class="col">front</div>
+                                    <div class="back"><img src="logo.png">back</div>
+                                </div>
+                            </div> -->
                                 <img src="anisha.png" class="col">
                                 <span class="text">ANISHA SODANI<br>FRONTEND</span>
+                                <span class="footer_image"><a
+                                        href="https://www.linkedin.com/in/anisha-sodani-2430ba257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                                            src="linkedin.png"></a></span>
                             </p>
-                        </span>
+                        </div>
+
                         <br>
-                        <span>
+                        <div class="txt">
                             <p>
                                 <img src="sunio.png" class="col">
                                 <span class="text">SUNOY ROY<br>UI/UX Designer</span>
+                                <span class="footer_image"><a
+                                        href="https://www.linkedin.com/in/sunoy-roy-52782a258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                                            src="linkedin.png"></a></span>
                             </p>
-                        </span>
+                        </div>
                         <br>
-                        <span>
+                        <div class="txt">
                             <p>
                                 <img src="mayank.png" class="col">
-                                <span class="text">MAYANK CHAUHAN<br>BACKEND</span>
+                                <span class="text">MAYANK CHOUHAN<br>BACKEND</span>
+                                <span class="footer_image"><a
+                                        href="https://www.linkedin.com/in/mayank-chouhan-a92466251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img
+                                            src="linkedin.png"></a></span>
                             </p>
-                        </span>
+                        </div>
                     </div>
                 </div>
             </div>
