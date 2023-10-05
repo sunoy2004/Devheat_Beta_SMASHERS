@@ -15,7 +15,8 @@ if (mysqli_num_rows($result) > 0) {
         echo "Name: " . $row['user_name'] . "<br>";
         echo "Skills: " . $row['skills'] . "<br>";
         echo "Domain: " . $row['domain'] . "<br>";
-        echo "linkedin: " . $row['linkedin'] . "<br><br>";
+        echo "linkedin: " . $row['linkedin'] . "<br>";
+        echo "experience: " . $row['experience'] . "<br><br>";
     }
 } else {
     echo "No records found.";

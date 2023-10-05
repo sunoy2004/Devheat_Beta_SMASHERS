@@ -11,6 +11,7 @@ include("connectionINPUT.php");
 		$skills = $_POST['skills'];
         $domain = $_POST['domain'];
         $linkedin = $_POST['linkedin'];
+        $experience = $_POST['experience'];
 
 		// Check if the username already exists
 		$check_username_query = "SELECT * FROM participater WHERE user_name = '$user_name'";
@@ -20,7 +21,7 @@ include("connectionINPUT.php");
 		{
 			echo "Username already exists. Please choose a different username.";
 		}
-		elseif(!empty($user_name) && !empty($skills) && !empty($domain) && !empty($linkedin) && !is_numeric($user_name))
+		elseif(!empty($user_name) && !empty($skills) && !empty($domain) && !empty($linkedin) && !empty($experience) && !is_numeric($user_name))
 		{
 
 			//save to database
@@ -28,12 +29,13 @@ include("connectionINPUT.php");
 			//$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
 			//$query = "insert into users (user_id,user_name,password,date) values (NULL,'$user_name','$password',NOW())";
             //INSERT INTO `participater` (`user_id`, `user_name`, `skills`, `domain`) VALUES (NULL, 'mm', 'python', 'frontend');
-            $query = "insert into participater (user_id,user_name,skills,domain,linkedin) values (NULL,'$user_name','$skills','$domain','$linkedin')";
+            $query = "insert into participater (user_id,user_name,skills,domain,linkedin,experience) values (NULL,'$user_name','$skills','$domain','$linkedin','$experience')";
 
 			if(mysqli_query($con, $query))
 			{
 				echo "<script>alert('User created successfully!');</script>";
-				header("Location: userOUTPUT.php");
+                echo "profile is updated";
+				header("Location: dev_heat.html");
 				die;
 			
 		}else
@@ -170,7 +172,7 @@ img{
 	</style>
 
 <div class="form-box">
-        <h2 id="title">Sign up</h2>
+        <h2 id="title">MY PROFILE</h2>
 		
 		<form method="post">
 			<div class="input">
@@ -191,11 +193,15 @@ img{
 				<h1>linkedin:</h1>	
 			    <input id="text" type="text" name="linkedin" placeholder="linkedin" required>
 			</div>
+            <div class="inputdata">
+				<h1>experience in years:</h1>	
+			    <input id="text" type="text" name="experience" placeholder="experience in years" required>
+			</div>
 			<br>
 			<br>
-			<button class="button" id="signupbtn">Sign up</button>
+			<button class="button" id="signupbtn">SUBMIT</button>
 
-			<a href="loginINPUT.php"><p id="signin">Already have an account?</p></a>
+			<a href="dev_heat.html"><p id="signin">BACK TO MAIN PAGE</p></a>
 				
 </body>
 </html>

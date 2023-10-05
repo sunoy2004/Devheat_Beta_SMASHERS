@@ -30,7 +30,7 @@ session_start();
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: dev_heat.html");
+						header("Location: userINPUT.php");
 						die;
 					}
 				}
@@ -54,7 +54,7 @@ session_start();
     <title>Sign Up</title>
     <link rel="icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="signin_up.css">
-    <script src="login.js"></script>
+    <script src="dev_heat.js"></script>
 </head>
 <body class="container">
 	<style>
@@ -186,7 +186,7 @@ img{
 			</div>
                 <br>
                 <br>
-				<button class="button" id="signinbtn" onclick="sibtn()">Sign in</button>
+				<button class="button" id="signinbtn" onclick="signbtn()">Sign in</button>
 
 			<a href="signupMAIN.php"><p id="signup">New Member?</p></a>
 			<p>--------------------------- OR --------------------------</p>

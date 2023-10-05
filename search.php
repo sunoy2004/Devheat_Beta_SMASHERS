@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
    // Generate HTML table for search results
    if (mysqli_num_rows($result) > 0) {
     echo '<table class="styled-table">';
-    echo '<thead><tr><th>Name</th><th>Skills</th><th>Domain</th><th>linkedin</th></tr></thead>';
+    echo '<thead><tr><th>Name</th><th>Skills</th><th>Domain</th><th>linkedin</th><th>experience in years</th></tr></thead>';
     echo '<tbody>';
     while ($row = mysqli_fetch_assoc($result)) {
         echo '<tr>';
@@ -29,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         echo '<td>' . $row['skills'] . '</td>';
         echo '<td>' . $row['domain'] . '</td>';
         echo '<td>' . $row['linkedin'] . '</td>';
+        echo '<td>' . $row['experience'] . '</td>';
         echo '</tr>';
     }
     echo '</tbody>';
